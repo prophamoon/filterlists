@@ -69,9 +69,6 @@ youtube.com,youtube-nocookie.com##button[class*=share-button]
 youtube.com##.ytp-scroll-min
 youtube.com##.ytp-pause-overlay
 
-! Removes the frontpage link from the upper left YouTube logo (Not supported by ABP or AdBlock)
-youtube.com#?##logo:style(pointer-events: none !important; cursor: default !important)
-
 ! Removes video epilogue suggestion overlays
 youtube.com##.ytp-ce-element-show
 
