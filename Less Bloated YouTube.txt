@@ -1,6 +1,7 @@
 ! Title: Less Bloated YouTube
-! Last update: 16 January 2024
 ! Description: This list is based on some of DandelionSprout's lists on his Github repository "adfilt", being them "YouTube: Even More Pure Video Experience" and "YouTube: Yet Even More Pure Video Experience".
+! Homepage: https://github.com/prophamoon/filterlists
+! Version: 16 January 2024
 
 ! Removes the YouTube Gaming button in the left-hand menu
 www.youtube.com#?#ytd-guide-entry-renderer:has(a[href*="/gaming"])
