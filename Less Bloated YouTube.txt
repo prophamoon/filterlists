@@ -1,0 +1,282 @@
+! Title: Less Bloated YouTube
+! Last update: 16 January 2024
+! Description: This list is based on some of DandelionSprout's lists on his Github repository "adfilt", being them "YouTube: Even More Pure Video Experience" and "YouTube: Yet Even More Pure Video Experience".
+
+! Removes the YouTube Gaming button in the left-hand menu
+www.youtube.com#?#ytd-guide-entry-renderer:has(a[href*="/gaming"])
+
+! Removes the Trending button in the left-hand menu
+m.youtube.com##.scbrr-tab[href="/feed/trending"]
+m.youtube.com##ytm-pivot-bar-item-renderer:nth-of-type(2)
+
+! Removes the Discover button in the left-hand menu
+www.youtube.com#?#ytd-guide-entry-renderer:has(a[href*="feed/guide_builder"])
+
+! Removes the pop-out player button in the video player
+www.youtube.com##.ytp-button.ytp-miniplayer-button
+
+! Removes the Livestream button in the left-hand menu
+www.youtube.com#?#ytd-guide-entry-renderer:has(a[href*=UC4R8DWoMoI7CAwX8_LjQHig])
+
+! Removes the Homepage button in the left-hand menu
+www.youtube.com#?#ytd-guide-entry-renderer:has(a[href="/"])
+www.youtube.com#?#ytd-mini-guide-entry-renderer:has(a[href="/"])
+m.youtube.com##.scbrr-tab[href="/"]
+m.youtube.com##ytm-pivot-bar-item-renderer:first-of-type
+
+! Removes the video store button in the left-hand menu
+www.youtube.com#?#ytd-guide-entry-renderer:has(a[href*=UClgRkhTL3_hImCAmdLfDE4g])
+
+! Removes the app drawer in the top-right menu
+www.youtube.com#?##button:has([aria-label*=app])
+
+! Removes video suggestions
+##.ytp-endscreen-content
+youtube.com,youtubekids.com###related
+m.youtube.com##ytm-watch ytm-compact-video-renderer
+m.youtube.com##[section-identifier=related-items]
+/annotations_module.js$script,domain=youtube.com|youtu.be|youtube-nocookie.com
+/endscreen.js$script,domain=youtube.com|youtu.be|youtube-nocookie.com
+inv.riverside.rocks,invidio.xamh.de,invidious-jp.kavin.rocks,invidious-us.kavin.rocks,invidious.exonip.de,invidious.hub.ne.kr,invidious.kavin.rocks,invidious.namazso.eu,invidious.snopyta.org,vid.mint.lgbt,vid.puffyan.us,y.com.cm,yewtu.be,youtube.076.ne.jp,yt.artemislena.eu,yt.didw.to,ytb.trom.tf,ytprivate.com,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion,hpniueoejy4opn7bc4ftgazyqjoeqwlvh2uiku2xqku6zpoa4bf5ruid.onion,invidc4i7i5uci6cledxsao6w7ng5etpflagdzoxj3yhipztwzvqjryd.onion,osbivz6guyeahrwp2lnwyjk2xos342h4ocsxyqrlaopqjuhwn2djiiyd.onion,p4ozd76i5zmqepf6xavtehswcve2taptxbwpswkq5osfvncwylavllid.onion,k7mnd6gyelynroxoncodxjz44fd5ch2ewfjl2a6ozmg3jy6fwyxq3cyd.onion#?#.pure-u-lg-1-5 > .h-box:has(.pure-u-14-24)
+hooktube.com#?#.col-lg-4:has(#video-list)
+! Seems to remove "Recommended for you" suggestions
+||youtube.com/related_ajax^
+
+! Removes the like/dislike counters
+youtube.com##ytd-toggle-button-renderer #text
+youtube.com###sentiment
+m.youtube.com##.slim-video-metadata-actions > [data-button-id]:first-of-type .button-renderer-text
+m.youtube.com##.slim-video-metadata-actions > [data-button-id]:nth-of-type(2) .button-renderer-text
+inv.riverside.rocks,invidio.xamh.de,invidious-jp.kavin.rocks,invidious-us.kavin.rocks,invidious.exonip.de,invidious.hub.ne.kr,invidious.kavin.rocks,invidious.namazso.eu,invidious.snopyta.org,vid.mint.lgbt,vid.puffyan.us,y.com.cm,yewtu.be,youtube.076.ne.jp,yt.artemislena.eu,yt.didw.to,ytb.trom.tf,ytprivate.com,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion,hpniueoejy4opn7bc4ftgazyqjoeqwlvh2uiku2xqku6zpoa4bf5ruid.onion,invidc4i7i5uci6cledxsao6w7ng5etpflagdzoxj3yhipztwzvqjryd.onion,osbivz6guyeahrwp2lnwyjk2xos342h4ocsxyqrlaopqjuhwn2djiiyd.onion,p4ozd76i5zmqepf6xavtehswcve2taptxbwpswkq5osfvncwylavllid.onion,k7mnd6gyelynroxoncodxjz44fd5ch2ewfjl2a6ozmg3jy6fwyxq3cyd.onion###likes, #dislikes
+hooktube.com###video-stats .text-right
+hooktube.com###progress-bar-likes
+twitch.tv#?#.ffz__tooltip .stats:has-text(👍):has-text(👎)
+
+! Removes the large grey [YouTube Kids / game info] buttons below gaming videos
+youtube.com##ytd-rich-metadata-renderer.ytd-rich-metadata-row-renderer
+m.youtube.com##ytm-watch-metadata-app-promo-renderer
+m.youtube.com##ytm-rich-metadata-renderer
+
+! Removes the Share arrow button in fullscreen mode and in embeds
+youtube.com,youtube-nocookie.com##button[class*=share-button]
+
+! Aims to prevent video suggestions from showing up when pausing embedded videos
+##.ytp-scroll-min
+##.ytp-pause-overlay
+youtube.com##.ytp-scroll-min
+youtube.com##.ytp-pause-overlay
+
+! Removes the frontpage link from the upper left YouTube logo (Not supported by ABP or AdBlock)
+youtube.com#?##logo:style(pointer-events: none !important; cursor: default !important)
+
+! Removes video epilogue suggestion overlays
+youtube.com##.ytp-ce-element-show
+
+! Removes a banner that promotes YouTube Premium
+youtube.com###masthead-ad
+
+! Believed to remove sponsored description links inserted by rights holders
+www.youtube.com##ytd-metadata-row-renderer
+
+! Removes the Explore buttons in the left-hand menu
+www.youtube.com#?#ytd-guide-entry-renderer:has(a[href*="feed/explore"])
+www.youtube.com#?#ytd-mini-guide-entry-renderer:has(a[href*="feed/explore"])
+
+! Aims to remove the "Recommended" tickers on top of YouTube embeds
+##.ytp-cards-teaser
+
+! The "Experiencing interruptions" toast popup in the bottom corner when a video is bufferring (due to network congestion, underperforming hardware, or any other reason) (Thanks to https://gist.github.com/gidoBOSSftw5731; probably only works on Anglophone devices)
+www.youtube.com#?##toast:has(#text-container:has-text(/experiencing interruptions/i))
+
+! Block "My mix" and autogenerated playlists
+www.youtube.com#?#ytd-compact-radio-renderer:has(ytd-thumbnail-overlay-bottom-panel-renderer)
+www.youtube.com#?#ytd-rich-item-renderer:has(ytd-thumbnail-overlay-bottom-panel-renderer)
+
+! Same as above, but in the window after you finish a video. This does leave black squares where they were.
+www.youtube.com#?#a.ytp-suggestion-set.ytp-videowall-still:has(.ytp-videowall-still-listlabel-mix:not(:matches-css(display: none)))
+
+! Playlist recommendations under videos
+www.youtube.com#?#ytd-compact-playlist-renderer:has(ytd-thumbnail-overlay-side-panel-renderer)
+
+! Homepage info banners (despite my list discouraging users from using the homepage in the first place)
+www.youtube.com##.ytd-rich-section-renderer
+
+! The overlays that are visible when you hover over a video for «Watch later» and «Add to queue»
+www.youtube.com###hover-overlays
+
+! Removes comment teasers in the December 2021 revamp (The new comment box can still be loaded normally)
+www.youtube.com###teaser.ytd-comments-entry-point-header-renderer
+
+! ————————————————————————————————————————————————————————————————
+
+! ——— Comment sections that are not covered by "Pure Viewing Experience" ———
+
+! Removes the comment section on phones
+m.youtube.com##ytm-comment-section-renderer
+
+! Removes the comment section on livestreams
+youtube.com##ytd-live-chat-frame
+
+! Removes the comment section on livestream VoDs
+youtube.com###watch-discussion
+
+! Removes the comment section on third-party GUIs
+inv.riverside.rocks,invidio.xamh.de,invidious-jp.kavin.rocks,invidious-us.kavin.rocks,invidious.exonip.de,invidious.hub.ne.kr,invidious.kavin.rocks,invidious.namazso.eu,invidious.snopyta.org,vid.mint.lgbt,vid.puffyan.us,y.com.cm,yewtu.be,youtube.076.ne.jp,yt.artemislena.eu,yt.didw.to,ytb.trom.tf,ytprivate.com,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion,hpniueoejy4opn7bc4ftgazyqjoeqwlvh2uiku2xqku6zpoa4bf5ruid.onion,invidc4i7i5uci6cledxsao6w7ng5etpflagdzoxj3yhipztwzvqjryd.onion,osbivz6guyeahrwp2lnwyjk2xos342h4ocsxyqrlaopqjuhwn2djiiyd.onion,p4ozd76i5zmqepf6xavtehswcve2taptxbwpswkq5osfvncwylavllid.onion,k7mnd6gyelynroxoncodxjz44fd5ch2ewfjl2a6ozmg3jy6fwyxq3cyd.onion###comments
+
+! ————————————————————————————————————————————————————————————————
+
+! ——— "Disable Polymer" mode ———
+
+! Removes the Homepage button in the left-hand menu when using "Disable polymer"
+www.youtube.com###what_to_watch-guide-item
+
+! Removes the video store and YouTube Gaming buttons in the left-hand menu when using "Disable polymer"
+www.youtube.com##li.guide-section:nth-of-type(5) > .personal-item.guide-item-container > .yt-box.yt-uix-tdl.guide-user-links
+
+! Removes the Discover button in the left-hand menu when using "Disable polymer"
+www.youtube.com##li.guide-section:nth-of-type(4)
+
+! Removes the Trending button in the left-hand menu when using "Disable polymer"
+www.youtube.com###trending-guide-item
+
+! Attempts to remove YouTube frontpage recommended videos and channels when using "Disable polymer" (and using YouTube in a Germanic language)
+www.youtube.com#?#.feed-item-container.browse-list-item-container:has(.shelf-title-annotation:has-text( for ))
+
+! Removes the like/dislike counters
+www.youtube.com##.like-button-renderer-like-button > .yt-uix-button-content
+www.youtube.com##.like-button-renderer-dislike-button > .yt-uix-button-content
+www.youtube.com##.video-extras-sparkbars
+
+! ————————————————————————————————————————————————————————————————
+
+! ——— "TV" mode ———
+
+! Removes most video suggestions in TV mode
+! Sadly, at least one suggestion had to remain in each row, or else you couldn't browse down to the Home and Search buttons.
+www.youtube.com##.exp-enable-live-seeking > #leanback > #app-markup > #watch > #bottom-half .pivot-row .watchable-tile:nth-of-type(1n+2)
+
+! Removes the Trending button in the top bar. At least I think it's the Trending button.
+www.youtube.com##div.top-nav-tab:nth-of-type(2)
+
+! Removes the Gaming button in the top bar
+www.youtube.com#?#div.top-nav-tab:has-text(/^Gaming$/)
+
+! ————————————————————————————————————————————————————————————————
+
+! ——— YouTube Android apps (Requires "AdGuard for Android") ———
+
+!#if adguard_app_android
+! Removes comments on video pages
+||youtube.com/live_chat_fragments_ajax?$app=com.google.android.youtube|com.google.android.apps.youtube.music|com.google.android.apps.youtube.vr|com.google.android.youtube.tv|com.google.android.youtube.googletv
+||youtube.com/comment_service_ajax?$app=com.google.android.youtube|com.google.android.apps.youtube.music|com.google.android.apps.youtube.vr|com.google.android.youtube.tv|com.google.android.youtube.googletv
+
+! Removes video suggestions
+/annotations_module.js$app=com.google.android.youtube|com.google.android.apps.youtube.music|com.google.android.apps.youtube.vr|com.google.android.youtube.tv|com.google.android.youtube.googletv
+/endscreen.js$app=com.google.android.youtube|com.google.android.apps.youtube.music|com.google.android.apps.youtube.vr|com.google.android.youtube.tv|com.google.android.youtube.googletv
+||youtube.com/annotations_invideo?$app=com.google.android.youtube|com.google.android.apps.youtube.music|com.google.android.apps.youtube.vr|com.google.android.youtube.tv|com.google.android.youtube.googletv
+
+! Removes recommended and featured videos in the endscreen
+||ytimg.com/yts/swfbin/player-*/endscreen.swf$app=com.google.android.youtube|com.google.android.apps.youtube.music|com.google.android.apps.youtube.vr|com.google.android.youtube.tv|com.google.android.youtube.googletv
+!#endif
+
+! ————————————————————————————————————————————————————————————————
+
+! Below are entries that I borrowed verbatim (except for adding extra domain coverage) from «YouTube: Pure Video Experience», which was maintained by monztA until 2017, and which is currently believed to have no known copyright statements or licences.
+
+! Removes video suggestions on video pages
+youtube.com##.watch-sidebar-body > #watch-related > .related-list-item
+! Removes recommended channels on home page, susbcriptions page and feed
+youtube.com##.home .branded-page-v2-secondary-col
+youtube.com##.feed .branded-page-v2-secondary-col
+youtube.com##.guide-builder-v2 .branded-page-v2-secondary-col
+! Removes sharing tab below videos
+||youtube.com/share_ajax?action_get_share_box=1&video_id=$xmlhttprequest
+youtube.com##.action-panel-trigger[role=button][data-trigger-for=action-panel-share]
+youtube.com##.yt-uix-button[data-trigger-for=action-panel-share]
+! Removes recommended and featured videos in the endscreen
+||ytimg.com/yts/swfbin/player-*/endscreen.swf$object-subrequest,domain=youtube.com|youtu.be|youtube-nocookie.com
+youtube.com,youtube-nocookie.com##.html5-endscreen-content
+youtube.com,youtube-nocookie.com##.html5-endscreen
+! Removes related/featured/popular channels on channel pages
+youtube.com##.branded-page-v2-secondary-col > .branded-page-related-channels > .yt-uix-tooltip
+youtube.com##.branded-page-v2-secondary-col > .branded-page-related-channels > .yt-uix-tooltip + .branded-page-related-channels-list
+! "Subscribe to see more videos from this channel" on home page after watching some video of a channel
+youtube.com###channel-subscription-promo-in-feed
+! <<<<<<<< https://raw.githubusercontent.com/DandelionSprout/adfilt/master/YouTubeEvenMorePureVideoExperience.txt
+!#include StopAutoplayOnYouTube.txt
+! >>>>>>>> https://raw.githubusercontent.com/DandelionSprout/adfilt/master/StopAutoplayOnYouTube.txt
+[Adblock Plus 2.0]
+! Title: 📺 YouTube Clear View
+! Description: Clean up YouTube clutter
+! Homepage: https://github.com/yokoffing/filterlists
+! Expires: 4 days (update frequency)
+! Version: 18 December 2023
+! Syntax: AdBlock
+
+! Hide the text label of the dislike/share/download/report/save buttons
+! new format June 2023
+www.youtube.com###actions.ytd-watch-metadata button > div[class$="text-content"]:not(:has-text(/[\d]/))
+www.youtube.com###actions.ytd-watch-metadata ytd-button-renderer .yt-spec-button-shape-next .yt-spec-button-shape-next--button-text-content
+www.youtube.com###actions.ytd-watch-metadata ytd-button-renderer .yt-spec-button-shape-next__icon:style(margin-right: -6px !important; margin-left: -6px !important;)
+m.youtube.com##ytm-slim-video-action-bar-renderer button [class*="button-text-content"]:not(:has-text(/\d/))
+m.youtube.com##ytm-slim-video-action-bar-renderer ytm-button-renderer div[class$="icon"]:style(margin-right: -6px !important; margin-left: -6px !important;)
+
+! Hide "Shorts remixing this video" shelf in the description
+www.youtube.com##ytd-reel-shelf-renderer
+
+! Don't enter / exit fullscreen on double-click 
+www.youtube.com##+js(aeld, dblclick)
+
+! Hide View Products
+www.youtube.com##.ytp-suggested-action-badge-expanded
+
+! Hide Includes paid promotion
+www.youtube.com##.ytp-paid-content-overlay
+
+! Hide upcoming Youtube videos
+www.youtube.com##ytd-browse ytd-grid-video-renderer:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style="UPCOMING"])
+www.youtube.com##ytd-browse ytd-rich-item-renderer:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style="UPCOMING"])
+www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-video-renderer ytd-thumbnail-overlay-time-status-renderer[overlay-style="UPCOMING"]:upward(ytd-item-section-renderer)
+
+! Brand image in the corner
+youtube.com##.ytp-button.branding-img-container
+
+! Hide "1080p Premium" in the video quality menu
+!#if env_firefox
+youtube.com##.ytp-quality-menu .ytp-premium-label:upward(.ytp-menuitem)
+!#endif
+!#if env_chromium
+youtube.com##.ytp-quality-menu .ytp-menuitem:has(.ytp-premium-label)
+!#endif
+
+! Hide horizontal scrollbar. This is only shown on Firefox (version 86 and above)
+! https://github.com/yokoffing/filterlists/pull/109
+! https://github.com/yokoffing/filterlists/pull/112
+!#if env_firefox
+www.youtube.com##ytd-app:style(--ytd-app-fullerscreen-scrollbar-width: -1px !important;)
+!#endif
+
+! Hide badges (such as "New") under video recommendations on the sidebar
+! https://github.com/yokoffing/filterlists/pull/114
+www.youtube.com##ytd-video-meta-block + ytd-badge-supported-renderer
+
+! Hide "smartimation" animations
+! Hide the rainbow-colored border animation around the subscribe button
+! https://github.com/yokoffing/filterlists/pull/117
+www.youtube.com##yt-smartimation > *:not(.smartimation__content)
+
+! Prevent stats from live-updating
+! https://github.com/yokoffing/filterlists/pull/113
+||youtube.com/youtubei/v1/updated_metadata
+
+!!! UNUSED
+
+! Hide recommendation sidebar
+! www.youtube.com##ytd-watch-next-secondary-results-renderer.ytd-watch-flexy.style-scope
+
+! Hide video annotations
+! Block once for all the scripts responsible for annotations:
+! /annotations_module.js$script,important,domain=youtube.com
+
+! Hide the end screen video that autoplays next video
+! /endscreen.js$script,important,domain=youtube.com
