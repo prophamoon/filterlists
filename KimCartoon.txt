@@ -1,0 +1,17 @@
+! Title: KimCartoon
+! Description: Just some small changes that remome things that kind of clutter on the KimCartoon website.
+! Homepage: https://github.com/prophamoon/filterlists
+! Version: 26 April 2024
+! Syntax: AdBlock
+
+
+! Removes all information about their Facebook page
+www.facebook.com/plugins/like.php$subdocument
+www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FKimCartoon-1500686783296635&width=300&colorscheme=dark&show_faces=true&stream=false&header=false&height=160$subdocument
+www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FKimCartoon-1500686783296635&width=300&colorscheme=dark&show_faces=true&stream=false&header=false&height=160$subdocument
+www.facebook.com/plugins/like.php$subdocument
+kimcartoon.li##div.clear2:nth-of-type(9)
+
+! Removes the empty space under the top subbar
+kimcartoon.li###navsubbar
+
